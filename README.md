@@ -1,4 +1,4 @@
-# algorithms
+# Algorithms
 
 ###Bubble Sort
 ```javascript
@@ -13,7 +13,7 @@ function bubbleSort(a){
 }
 ```
 
-###selectionSort
+###Selection Sort
 ```javascript
 function selectionSort(a){
 	for(var i=0;i<a.length-1;i++){
