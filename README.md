@@ -42,3 +42,27 @@ function insersionSort(a){
 	}
 }
 ```
+
+
+###Merge Sort
+```javascript
+function mergeSort(a){
+	if(a.length > 1){
+		var mid = Math.floor(a.length/2);
+		var left = a.slice(0,mid); 
+		var right = a.slice(mid,a.length);
+		mergeSort(left);mergeSort(right);
+		//merging sorted arrays
+		var i=j=k=0;
+		while(i<left.length && j< right.length){			
+			left[i]<right[j] ? a[k++]=left[i++] : a[k++]=right[j++];
+		}
+		while(i < left.length){
+			a[k++]=left[i++];
+		}		
+		while(j < right.length){
+			a[k++]=right[j++];
+		}
+	}
+}
+```
