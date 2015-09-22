@@ -22,18 +22,8 @@ function selectionSort(a){
 			if(a[j]<a[minPosition]){				
 				minPosition=j;
 			}
-		}
-		function selectionSort(a){
-	for(var i=0;i<a.length-1;i++){
-		var minPosition=i;		
-		for(var j=i;j<a.length;j++){
-			if(a[j]<a[minPosition]){				
-				minPosition=j;
-			}
 		}		
-		var t=a[i];	a[i]=a[minPosition];a[minPosition]=t;//swap
-	}
-}
+		var t=a[i];a[i]=a[minPosition];a[minPosition]=t;//swap
 	}
 }
 ```
