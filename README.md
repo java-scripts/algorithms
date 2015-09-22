@@ -28,3 +28,17 @@ function selectionSort(a){
 }
 ```
 
+###Insertion Sort
+```javascript
+function insersionSort(a){
+	for(var i=0;i<a.length;i++){
+		var currentValue = a[i];
+		var position = i;
+		while(position>0 && a[position-1]>currentValue){
+			a[position]=a[position-1];
+			position--;
+		}
+		a[position]=currentValue;
+	}
+}
+```
