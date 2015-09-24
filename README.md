@@ -107,3 +107,18 @@ function permute(prefix,str){
 }
 permute("","abc");
 ```
+###Search in JSON
+```javascript
+function search(node, key){
+	for(var name in node){
+		var child= node[name];
+		if(name===key){
+			return child;
+		}else if (typeof child === "object"){
+			var t=search(child, key);
+			if(t)return t;
+		}		
+	}
+}
+console.log(search({"a":{"b":{}},"c":{"d":{"e":{},"f":{"h":[{"i":{"l":"111","m":"222"},"j":{"n":"333"}},{"k":{}}]},"g":{}}}},  'h'));
+```
