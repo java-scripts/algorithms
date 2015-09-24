@@ -66,3 +66,30 @@ function mergeSort(a){
 	}
 }
 ```
+
+
+###Quick Sort
+```javascript
+function partition(a,left,right){
+	var i = left, j = right, tmp, pivot = a[left];	
+	while( i <= j){
+		while(a[i]<pivot) i++;
+		while(a[j]>pivot) j--;
+		if(i<=j){
+			tmp = a[i];	a[i]=a[j]; a[j]=tmp;//swap
+			i++; j--;
+		}	
+	}	
+	return i;
+}
+
+function quickSort(a,left,right){
+	var index = partition(a,left,right);
+	if(left < index-1) quickSort(a,left,index-1);		
+	if(index < right) quickSort(a,index,right);
+}
+
+quickSort(a,0,a.length-1);
+```
+
+
