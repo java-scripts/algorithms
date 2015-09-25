@@ -122,3 +122,15 @@ function search(node, key){
 }
 console.log(search({"a":{"b":{}},"c":{"d":{"e":{},"f":{"h":[{"i":{"l":"111","m":"222"},"j":{"n":"333"}},{"k":{}}]},"g":{}}}},  'h'));
 ```
+###Towers of Hanoi
+```javascript
+//move n disks from A to B
+function hanoi(n, A, B, C){
+	if(n>0){		
+		hanoi(n-1,A,C,B);//move n-1 disks from A to C 
+		console.log('move disk:'+ n + ' from:'+A+"  to: "+B	);//move nth disk from A to B
+		hanoi(n-1,C,B,A);//move n-1 disks from C to B 
+	}	
+}
+hanoi(3,'A','B','C');
+```
